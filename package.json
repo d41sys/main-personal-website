@@ -1,26 +1,22 @@
 {
-  "name": "codebyte.re",
-  "version": "1.0.0",
-  "description": "codebytere's personal website",
-  "main": "js/cli.js",
+  "name": "portfolio",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "dev": "http-server -o",
-    "format": "prettier --write 'src/*.js'",
-    "lint": "prettier --check 'src/*.js'"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/codebytere/codebytere.github.io.git"
-  },
-  "author": "Shelley Vohr <shelley.vohr@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/codebytere/codebytere.github.io/issues"
-  },
-  "homepage": "https://github.com/codebytere/codebytere.github.io#readme",
-  "devDependencies": {
-    "http-server": "^0.12.1",
-    "prettier": "^2.0.2",
-    "ecstatic": ">=4.1.4"
+  "dependencies": {
+    "@nextui-org/react": "^1.0.0-beta.12",
+    "autoprefixer": "10.4.14",
+    "eslint": "8.40.0",
+    "eslint-config-next": "13.4.2",
+    "next": "13.4.2",
+    "postcss": "8.4.23",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "tailwindcss": "3.3.2"
   }
 }

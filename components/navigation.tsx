@@ -10,7 +10,7 @@ import { Icons } from '@/components/icons';
 import { cva } from 'class-variance-authority';
 
 const navigationMenuTriggerStyle = cva(
-  'inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus:outline-none focus:bg-accent focus:text-accent-foreground disabled:opacity-80 disabled:pointer-events-none bg-background hover:bg-accent hover:text-accent-foreground data-[state=open]:bg-accent/80 data-[active]:bg-accent/80 h-10 py-2 px-4 group w-max',
+  'inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus:outline-none focus:bg-teal-400 focus:text-accent-foreground disabled:opacity-80 disabled:pointer-events-none bg-background hover:bg-teal-400 hover:text-accent-foreground data-[state=open]:bg-teal-400 data-[active]:bg-teal-400 h-10 py-2 px-4 group w-max',
 );
 
 export function Navigation() {
@@ -27,7 +27,7 @@ export function Navigation() {
           href="/about"
           className={cn(
             navigationMenuTriggerStyle(),
-            pathname === '/about' ? 'text-foreground font-bold' : 'text-foreground/60',
+            pathname === '/about' ? 'text-foreground font-bold bg-teal-400 h-10 py-2 px-4 group w-max' : 'text-foreground/60',
           )}
         >
           About
@@ -36,7 +36,7 @@ export function Navigation() {
           href="/blog"
           className={cn(
             navigationMenuTriggerStyle(),
-            pathname?.startsWith('/blog') ? 'text-foreground font-bold' : 'text-foreground/60',
+            pathname?.startsWith('/blog') ? 'text-foreground font-bold bg-teal-400 h-10 py-2 px-4 group w-max' : 'text-foreground/60',
           )}
         >
           Blog
@@ -45,19 +45,19 @@ export function Navigation() {
           href="/contact"
           className={cn(
             navigationMenuTriggerStyle(),
-            pathname?.startsWith('/contact') ? 'text-foreground font-bold' : 'text-foreground/60',
+            pathname?.startsWith('/contact') ? 'text-foreground font-bold bg-teal-400 h-10 py-2 px-4 group w-max' : 'text-foreground/60',
           )}
         >
           Contact
         </Link>
         <Link
-          href="/contact"
+          href="/porfolio"
           className={cn(
             navigationMenuTriggerStyle(),
-            pathname?.startsWith('/contact') ? 'text-foreground font-bold' : 'text-foreground/60',
+            pathname?.startsWith('/porfolio') ? 'text-foreground font-bold bg-teal-400 h-10 py-2 px-4 group w-max' : 'text-foreground/60',
           )}
         >
-          GitHub
+          Porfolio
         </Link>
       </nav>
     </div>

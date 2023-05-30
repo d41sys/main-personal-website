@@ -6,6 +6,8 @@ import { buttonVariants } from "@/components/ui/button"
 // import { CommandMenu } from "@/components/command-menu"
 import { Icons } from "@/components/icons"
 import { Navigation } from "@/components/navigation"
+import { CommandMenu } from "@/components/command-menu"
+import { ModeToggle } from "./mode-toggle"
 // import { MobileNav } from "@/components/mobile-nav"
 // import { ModeToggle } from "@/components/mode-toggle"
 
@@ -15,6 +17,9 @@ export function SiteHeader() {
       <div className="container flex h-14 items-center">
         <Navigation />
         <div className="flex flex-1 items-center justify-between space-x-2 sm:space-x-4 md:justify-end">
+          <div className="w-full flex-1 md:w-auto md:flex-none">
+            <CommandMenu />
+          </div>
           <nav className="flex items-center space-x-1">
             <Link
               href={siteConfig.links.github}
@@ -52,6 +57,7 @@ export function SiteHeader() {
                 <span className="sr-only">Twitter</span>
               </div>
             </Link>
+            <ModeToggle/>
           </nav>
         </div>
       </div>

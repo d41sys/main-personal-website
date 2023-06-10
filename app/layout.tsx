@@ -26,9 +26,13 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning>
+      {/* <head>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
+      </head> */}
       <body className={cn('min-h-screen bg-background antialiased', spaceMono.className)}>
+        {/* <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script> */}
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="relative flex min-h-screen flex-col">
+          <div className="flex min-h-screen flex-col">
             <SiteHeader />
             <div className="flex-1">{children}</div>
             <SiteFooter />

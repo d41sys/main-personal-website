@@ -27,7 +27,7 @@ export function Navigation() {
           href="/about"
           className={cn(
             navigationMenuTriggerStyle(),
-            pathname === '/about' ? 'text-foreground font-bold bg-teal-400 h-10 py-2 px-4 group w-max' : 'text-foreground/60',
+            pathname === '/about' ? 'text-foreground font-bold bg-teal-400 h-10 py-2 px-4 group w-max' : 'text-foreground/60 bg-background/0',
           )}
         >
           About
@@ -36,7 +36,7 @@ export function Navigation() {
           href="/blog"
           className={cn(
             navigationMenuTriggerStyle(),
-            pathname?.startsWith('/blog') ? 'text-foreground font-bold bg-teal-400 h-10 py-2 px-4 group w-max' : 'text-foreground/60',
+            pathname?.startsWith('/blog') ? 'text-foreground font-bold bg-teal-400 h-10 py-2 px-4 group w-max' : 'text-foreground/60 bg-background/0',
           )}
         >
           Blog
@@ -45,19 +45,19 @@ export function Navigation() {
           href="/contact"
           className={cn(
             navigationMenuTriggerStyle(),
-            pathname?.startsWith('/contact') ? 'text-foreground font-bold bg-teal-400 h-10 py-2 px-4 group w-max' : 'text-foreground/60',
+            pathname?.startsWith('/contact') ? 'text-foreground font-bold bg-teal-400 h-10 py-2 px-4 group w-max' : 'text-foreground/60 bg-background/0',
           )}
         >
           Contact
         </Link>
         <Link
-          href="/porfolio"
+          href="/portfolio"
           className={cn(
             navigationMenuTriggerStyle(),
-            pathname?.startsWith('/porfolio') ? 'text-foreground font-bold bg-teal-400 h-10 py-2 px-4 group w-max' : 'text-foreground/60',
+            pathname?.startsWith('/portfolio') ? 'text-foreground font-bold bg-teal-400 h-10 py-2 px-4 group w-max' : 'text-foreground/60 bg-background/0',
           )}
         >
-          Porfolio
+          Portfolio
         </Link>
       </nav>
     </div>

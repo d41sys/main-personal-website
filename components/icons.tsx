@@ -1,6 +1,7 @@
 import {
     AlertTriangle,
     ArrowRight,
+    Briefcase,
     Check,
     ChevronLeft,
     ChevronRight,
@@ -9,6 +10,7 @@ import {
     CreditCard,
     File,
     FileText,
+    GraduationCap,
     HelpCircle,
     Image,
     Laptop,
@@ -67,6 +69,8 @@ import {
     sun: SunMedium,
     moon: Moon,
     laptop: Laptop,
+    graduationCap: GraduationCap,
+    briefcase: Briefcase,
     gitHub: (props: LucideProps) => (
       <svg viewBox="0 0 438.549 438.549" {...props}>
         <path

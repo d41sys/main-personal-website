@@ -5,12 +5,12 @@ import Image from 'next/image';
 
 export function FeaturedArticle({article}) {
   return (
-    <div className="w-96 mt-10">
+    <div className="w-96 mt-10 border border-black rounded-sm">
       <div className="flex flex-col relative">
         <Image
-          className="rounded-lg "
+          className="rounded-t-sm border-b border-black"
           style={{
-            marginBottom: '20px',
+            marginBottom: '10px',
             objectFit: 'cover',
             width: 'auto',
             height: '170px',
@@ -25,13 +25,13 @@ export function FeaturedArticle({article}) {
           src={article.imgLink}
           alt=""
         />
-        <h3 className="scroll-m-20 border-b pb-2 text-xl font-semibold tracking-tight transition-colors first:mt-0">
+        <h3 className="scroll-m-20 border-b border-black pb-2 text-xl font-semibold tracking-tight transition-colors first:mt-0 px-2">
           {article.title}
         </h3>
-        <div className="leading-7 [&:not(:first-child)]:mt-6">
+        <div className="leading-7 [&:not(:first-child)]:mt-4 px-2">
           {article.desc}
         </div>
-        <div className="text-xs scroll-m-20 pt-2 text-xl font-semibold tracking-tight transition-colors first:mt-0">
+        <div className="text-xs scroll-m-20 pt-2 text-xl font-semibold tracking-tight transition-colors first:mt-0 px-2">
           7 MIN READ
         </div>
       </div>

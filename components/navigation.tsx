@@ -48,7 +48,7 @@ export function Navigation() {
             pathname?.startsWith('/contact') ? 'text-foreground font-bold bg-teal-400 h-10 py-2 px-4 group w-max' : 'text-foreground/60 bg-background/0',
           )}
         >
-          Contact
+          Social Media
         </Link>
         <Link
           href="/portfolio"

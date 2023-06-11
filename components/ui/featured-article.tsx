@@ -31,6 +31,9 @@ export function FeaturedArticle({article}) {
         <div className="leading-7 [&:not(:first-child)]:mt-6">
           {article.desc}
         </div>
+        <div className="text-xs scroll-m-20 pt-2 text-xl font-semibold tracking-tight transition-colors first:mt-0">
+          7 MIN READ
+        </div>
       </div>
     </div>
   );

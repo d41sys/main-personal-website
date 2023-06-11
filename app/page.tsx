@@ -12,13 +12,14 @@ import { Icons } from '@/components/icons';
 import { PageHeader, PageHeaderDescription, PageHeaderHeading } from '@/components/page-header';
 import { StyleSwitcher } from '@/components/style-switcher';
 import { AboutHeader } from '@/components/about-header';
-
+import { ArticleHeader } from '@/components/article-header';
 
 export default function Page() {
   return (
     <div className="container relative pb-10">
       <StyleSwitcher />
       <AboutHeader />
+      <ArticleHeader />  
     </div>
   );
 }

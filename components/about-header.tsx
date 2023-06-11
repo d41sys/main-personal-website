@@ -15,6 +15,9 @@ export function AboutHeader() {
   return (
     <div className="flex flex-row mt-10">
       <PageHeader className="-mt-10">
+        <PageHeaderHeading className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%">
+          Build your component library
+        </PageHeaderHeading>
         <Link
           href="/about"
           className="inline-flex items-center rounded-lg bg-muted px-3 py-1 text-sm font-medium"
@@ -23,7 +26,6 @@ export function AboutHeader() {
           Hook Form and Zod
           <ChevronRight className="ml-1 h-4 w-4" />
         </Link>
-        <PageHeaderHeading>Build your component library.</PageHeaderHeading>
         <PageHeaderDescription>
           Beautifully designed components that you can copy and paste into your apps. Accessible.
           Customizable. Open Source.

@@ -13,10 +13,10 @@ import { PageHeader, PageHeaderDescription, PageHeaderHeading } from '@/componen
 
 export function AboutHeader() {
   return (
-    <div className="flex flex-row mt-10">
-      <PageHeader className="-mt-10">
+    <div className="flex flex-row mt-10 ">
+      <PageHeader className="-mt-10 flex-initial">
         <PageHeaderHeading className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%">
-          Build your component library
+          Welcome to my home
         </PageHeaderHeading>
         <Link
           href="/about"
@@ -48,8 +48,8 @@ export function AboutHeader() {
       <Player
         autoplay
         loop
-        src="https://assets5.lottiefiles.com/packages/lf20_9eLZ98.json"
-        style={{ height: '300px', width: '300px' }}
+        src="https://assets5.lottiefiles.com/packages/lf20_cuKhxGQKFB.json"
+        style={{ height: '300px', width: '700px' , flex: 'auto'}}
       ></Player>
     </div>
   );

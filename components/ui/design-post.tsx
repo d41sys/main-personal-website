@@ -3,7 +3,7 @@
 import Image from 'next/image';
 
 
-export function FeaturedArticle({article}) {
+export function DesignPost({design}) {
   return (
     <div className="w-96 mt-10 border border-black rounded-sm">
       <div className="flex flex-col relative">
@@ -13,26 +13,22 @@ export function FeaturedArticle({article}) {
             marginBottom: '10px',
             objectFit: 'cover',
             width: 'auto',
-            height: '170px',
+            height: '400px',
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center center',
-            filter: 'grayscale(1)'
+            backgroundPosition: 'center center'
           }}
           width={0}
           height={0}
           sizes="100vw"
-          src={article.imgLink}
+          src={design.imgLink}
           alt=""
         />
         <h3 className="scroll-m-20 border-b border-black pb-2 text-xl font-semibold tracking-tight transition-colors first:mt-0 px-2">
-          {article.title}
+          {design.title}
         </h3>
         <div className="leading-7 [&:not(:first-child)]:mt-4 px-2">
-          {article.desc}
-        </div>
-        <div className="text-xs scroll-m-20 pt-2 text-xl font-semibold tracking-tight transition-colors first:mt-0 px-2 mb-2">
-          7 MIN READ
+          {design.desc}
         </div>
       </div>
     </div>

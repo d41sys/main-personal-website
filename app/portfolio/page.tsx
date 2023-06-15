@@ -8,6 +8,8 @@ import { Separator } from '@/components/ui/separator';
 import { ChevronRight } from 'lucide-react';
 import { ListItem } from '@/components/list-item';
 import { PageHeader, PageHeaderDescription, PageHeaderHeading } from '@/components/page-header';
+import { ArticleHeader } from '@/components/article-header';
+
 
 const articles = [
   {
@@ -58,27 +60,7 @@ const articles = [
 export default function Page() {
   return (
     <div className="container relative pb-10">
-      <PageHeader className="max-w-full">
-        <PageHeaderHeading className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
-          Featured Articles
-        </PageHeaderHeading>
-        <Link
-          href="/portfolio"
-          className="inline-flex items-center rounded-lg bg-muted px-3 py-1 text-sm font-medium"
-        >
-          🎉 <Separator className="mx-2 h-4" orientation="vertical" /> Discover more posts
-          <ChevronRight className="ml-1 h-4 w-4" />
-        </Link>
-        <PageHeaderDescription>
-          Beautifully designed components that you can copy and paste into your apps. Accessible.
-          Customizable. Open Source.
-        </PageHeaderDescription>
-        <div className="flex flex-row gap-10 w-full">
-          {articles.filter((item, index) => index < 4).map((article) => (
-            <FeaturedArticle article={article} />
-          ))}
-        </div>
-      </PageHeader>
+      <ArticleHeader />
       <PageHeader className="max-w-full">
         <PageHeaderHeading className="md:text-3xl">All Ariticles</PageHeaderHeading>
         <div className="flex flex-col w-full">

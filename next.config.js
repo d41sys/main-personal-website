@@ -11,7 +11,7 @@ const nextConfig = {
     appDir: true,
   },
   images : {
-    domains: ["flowbite.s3.amazonaws.com"]
+    domains: ["flowbite.s3.amazonaws.com", "cdn.dribbble.com"]
   },
   redirects() {
     return [

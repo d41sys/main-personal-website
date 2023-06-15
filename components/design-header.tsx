@@ -1,15 +1,17 @@
-import '../globals.css';
-import { Timeline } from '@/components/timeline';
+'use client';
+
+import Image from 'next/image';
 import Link from 'next/link';
-import { Gallery } from '@/components/gallery';
-import { GallerySlider } from '@/components/gallery-slider';
-import { FeaturedArticle } from '@/components/ui/featured-article';
-import { Separator } from '@/components/ui/separator';
 import { ChevronRight } from 'lucide-react';
-import { ListItem } from '@/components/list-item';
+import { Player } from '@lottiefiles/react-lottie-player';
+import { siteConfig } from '@/config/site';
+import { cn } from '@/lib/utils';
+import { buttonVariants } from '@/components/ui/button';
+import { Separator } from '@/components/ui/separator';
+import { Icons } from '@/components/icons';
 import { PageHeader, PageHeaderDescription, PageHeaderHeading } from '@/components/page-header';
 import { DesignPost } from '@/components/ui/design-post';
-import { DesignHeader } from '@/components/design-header';
+import { FeaturedArticle } from '@/components/ui/featured-article';
 
 const designs = [
   {
@@ -56,21 +58,33 @@ const designs = [
     title: '7 Lessons learned',
     desc: "7 I'm writing this post to document what went well and what went wrong.",
     time: 'Released on January 13th, 2022',
-  }
+  },
 ];
 
-export default function Page() {
+export function DesignHeader() {
   return (
-    <div className="container relative pb-10">
-      <DesignHeader />
-      <PageHeader className="max-w-full">
-        <PageHeaderHeading className="md:text-3xl">All Ariticles</PageHeaderHeading>
-        <div className="flex flex-col w-full">
-          {designs.map((article) => (
-            <ListItem article={article} />
+    <PageHeader className="max-w-full mb-10">
+      <PageHeaderHeading className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+        Design Projects
+      </PageHeaderHeading>
+      <Link
+        href="/portfolio"
+        className="inline-flex items-center rounded-lg bg-muted px-3 py-1 text-sm font-medium"
+      >
+        🎉 <Separator className="mx-2 h-4" orientation="vertical" /> Discover more posts
+        <ChevronRight className="ml-1 h-4 w-4" />
+      </Link>
+      <PageHeaderDescription>
+        Beautifully designed components that you can copy and paste into your apps. Accessible.
+        Customizable. Open Source.
+      </PageHeaderDescription>
+      <div className="flex flex-row gap-20 w-full">
+        {designs
+          .filter((item, index) => index < 3)
+          .map((design) => (
+            <DesignPost design={design} />
           ))}
-        </div>
-      </PageHeader>
-    </div>
+      </div>
+    </PageHeader>
   );
 }

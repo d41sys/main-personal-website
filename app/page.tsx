@@ -13,6 +13,8 @@ import { PageHeader, PageHeaderDescription, PageHeaderHeading } from '@/componen
 import { StyleSwitcher } from '@/components/style-switcher';
 import { AboutHeader } from '@/components/about-header';
 import { ArticleHeader } from '@/components/article-header';
+import { DesignHeader } from '@/components/design-header';
+
 
 export default function Page() {
   return (
@@ -20,6 +22,7 @@ export default function Page() {
       <StyleSwitcher />
       <AboutHeader />
       <ArticleHeader />  
+      <DesignHeader />
     </div>
   );
 }

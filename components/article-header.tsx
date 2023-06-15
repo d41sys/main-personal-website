@@ -37,15 +37,17 @@ const articles = [
 
 export function ArticleHeader() {
   return (
-    <PageHeader className="mt-10 max-w-full">
-      <PageHeaderHeading className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Featured Articles</PageHeaderHeading>
+    <PageHeader className="max-w-full mb-10">
+      <PageHeaderHeading className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+        Featured Articles
+      </PageHeaderHeading>
       <Link
-          href="/portfolio"
-          className="inline-flex items-center rounded-lg bg-muted px-3 py-1 text-sm font-medium"
-        >
-          🎉 <Separator className="mx-2 h-4" orientation="vertical" /> Discover more posts
-          <ChevronRight className="ml-1 h-4 w-4" />
-    </Link>
+        href="/portfolio"
+        className="inline-flex items-center rounded-lg bg-muted px-3 py-1 text-sm font-medium"
+      >
+        🎉 <Separator className="mx-2 h-4" orientation="vertical" /> Discover more posts
+        <ChevronRight className="ml-1 h-4 w-4" />
+      </Link>
       <PageHeaderDescription>
         Beautifully designed components that you can copy and paste into your apps. Accessible.
         Customizable. Open Source.

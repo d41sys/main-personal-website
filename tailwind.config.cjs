@@ -52,6 +52,17 @@ module.exports = {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
         },
+        'cyanCustom': '#80ffea',
+        'greenCustom': '#8aff80',
+        'orangeCustom': '#ffca80',
+        'pinkCustom': '#ff80bf',
+        'purpleCustom': '#9580ff',
+        'redCustom': '#ff9580',
+        'yellowCustom': '#ffff80',
+      },
+      backgroundImage: {
+        'gradient-135': 'linear-gradient(135deg, var(--tw-gradient-stops))',
+        'gradient-post' : 'linear-gradient(180deg, rgba(0, 0, 0, 1) 0, transparent 50%, transparent 70%, rgba(0, 0, 0, 1))'
       },
       borderRadius: {
         lg: 'var(--radius)',

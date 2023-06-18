@@ -37,8 +37,8 @@ const articles = [
 
 export function ArticleHeader() {
   return (
-    <PageHeader className="max-w-full mb-10">
-      <PageHeaderHeading className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+    <PageHeader className="max-w-full mb-10 selection:bg-yellowCustom selection:text-black">
+      <PageHeaderHeading className="text-transparent bg-clip-text bg-gradient-135 from-yellowCustom to-pinkCustom">
         Featured Articles
       </PageHeaderHeading>
       <Link
@@ -53,8 +53,8 @@ export function ArticleHeader() {
         Customizable. Open Source.
       </PageHeaderDescription>
       <div className="flex flex-row gap-10 w-full">
-        {articles.map((article) => (
-          <FeaturedArticle article={article} />
+        {articles.map((article, index) => (
+          <FeaturedArticle article={article} key={index}/>
         ))}
       </div>
     </PageHeader>

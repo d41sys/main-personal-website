@@ -1,3 +1,5 @@
+'use client';
+
 import '../globals.css';
 import { Timeline } from '@/components/timeline';
 import Link from 'next/link';
@@ -10,6 +12,9 @@ import { ListItem } from '@/components/list-item';
 import { PageHeader, PageHeaderDescription, PageHeaderHeading } from '@/components/page-header';
 import { DesignPost } from '@/components/ui/design-post';
 import { DesignHeader } from '@/components/design-header';
+import { Player } from '@lottiefiles/react-lottie-player';
+import Backward_lottie from "@/public/icons/Folder-Add_lottie.json";
+import { Icons } from '@/components/icons';
 
 const designs = [
   {
@@ -59,10 +64,15 @@ const designs = [
   }
 ];
 
+const animationFiles = [
+  import('@/public/icons/Backward_lottie.json')
+];
+
+
 export default function Page() {
   return (
     <div className="container relative pb-10">
-      <DesignHeader />
+      {/* <DesignHeader />
       <PageHeader className="max-w-full">
         <PageHeaderHeading className="md:text-3xl">All Ariticles</PageHeaderHeading>
         <div className="flex flex-col w-full">
@@ -70,7 +80,12 @@ export default function Page() {
             <ListItem article={article} />
           ))}
         </div>
-      </PageHeader>
+      </PageHeader> */}
+      {animationFiles.map((icon) => <Player
+        hover
+        src={Icons.moonIcon}
+        style={{ height: '300px', width: '700px' , flex: 'auto'}}
+      ></Player>)}
     </div>
   );
 }

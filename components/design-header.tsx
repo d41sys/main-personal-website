@@ -63,8 +63,8 @@ const designs = [
 
 export function DesignHeader() {
   return (
-    <PageHeader className="max-w-full mb-10">
-      <PageHeaderHeading className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+    <PageHeader className="max-w-full mb-10 selection:bg-purpleCustom selection:text-black">
+      <PageHeaderHeading className="text-transparent bg-clip-text bg-gradient-135 from-purpleCustom to-cyanCustom">
         Design Projects
       </PageHeaderHeading>
       <Link
@@ -81,8 +81,8 @@ export function DesignHeader() {
       <div className="flex flex-row gap-20 w-full">
         {designs
           .filter((item, index) => index < 3)
-          .map((design) => (
-            <DesignPost design={design} />
+          .map((design, index) => (
+            <DesignPost design={design} key={index}/>
           ))}
       </div>
     </PageHeader>

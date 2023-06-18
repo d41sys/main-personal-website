@@ -4,7 +4,7 @@ import { AboutHeader } from '@/components/about-header';
 
 export default function Page() {
   return (
-    <div className="container relative pb-10">
+    <div className="container relative pb-10 selection:bg-pinkCustom selection:text-black">
       <AboutHeader />
       <Timeline />
     </div>

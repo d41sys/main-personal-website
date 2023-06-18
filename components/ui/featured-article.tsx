@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export function FeaturedArticle({article}) {
   return (
-    <div className="w-96 mt-10 border border-black rounded-sm">
+    <div className="w-96 mt-10 border border-black rounded-sm hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.9)] transition duration-140 ease-in-out">
       <div className="flex flex-col relative">
         <Image
           className="rounded-t-sm border-b border-black"

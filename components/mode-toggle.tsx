@@ -11,6 +11,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { Icons } from "@/components/icons"
+import { Player } from '@lottiefiles/react-lottie-player';
 
 export function ModeToggle() {
   const { setTheme } = useTheme()
@@ -30,11 +31,15 @@ export function ModeToggle() {
           <span>Light</span>
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("dark")}>
-          <Icons.moon className="mr-2 h-4 w-4" />
-          <span>Dark</span>
+          <Player 
+            hover
+            src={Icons.moonIcon}
+            className="h-4 w-4"
+          ></Player>
+          <span className="ml-2">Dark</span>
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("system")}>
-          <Icons.laptop className="mr-2 h-4 w-4" />
+          <Icons.laptop className="mr-2 h-4 w-4"/>
           <span>System</span>
         </DropdownMenuItem>
       </DropdownMenuContent>

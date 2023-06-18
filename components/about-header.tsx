@@ -13,9 +13,9 @@ import { PageHeader, PageHeaderDescription, PageHeaderHeading } from '@/componen
 
 export function AboutHeader() {
   return (
-    <div className="flex flex-row mt-10 ">
+    <div className="flex flex-row mt-10 selection:bg-pinkCustom selection:text-black">
       <PageHeader className="-mt-10 flex-initial">
-        <PageHeaderHeading className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%">
+        <PageHeaderHeading className="text-transparent bg-clip-text bg-gradient-135 from-pinkCustom to-purpleCustom">
           Welcome to my home
         </PageHeaderHeading>
         <Link
@@ -38,7 +38,7 @@ export function AboutHeader() {
             target="_blank"
             rel="noreferrer"
             href={siteConfig.links.github}
-            className={cn(buttonVariants({ variant: 'outline' }))}
+            className={cn(buttonVariants({ variant: 'shadow' }))}
           >
             <Icons.gitHub className="mr-2 h-4 w-4" />
             GitHub

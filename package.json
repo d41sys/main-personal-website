@@ -40,6 +40,7 @@
     "remark": "^14.0.3",
     "remark-code-import": "^1.2.0",
     "remark-gfm": "^3.0.1",
+    "styled-components": "^6.0.0-rc.3",
     "tailwind-merge": "^1.12.0",
     "tailwindcss-animate": "^1.0.5",
     "typescript": "^4.9.5",

@@ -25,11 +25,11 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className={spaceMono.className}>
       {/* <head>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
       </head> */}
-      <body className={cn('min-h-screen bg-background antialiased', spaceMono.className)}>
+      <body className={cn('min-h-screen bg-background antialiased', spaceMono.className)} suppressHydrationWarning={true}>
         {/* <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script> */}
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="flex min-h-screen flex-col">

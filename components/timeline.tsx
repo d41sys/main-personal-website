@@ -35,7 +35,7 @@ export function Timeline() {
             target="_blank"
             rel="noreferrer"
             href="https://github.com"
-            className={cn(buttonVariants({ variant: "outline" }))}
+            className={cn(buttonVariants({ variant: "shadow" }))}
           >
             <Icons.gitHub className="mr-2 h-4 w-4" />
             GitHub

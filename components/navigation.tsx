@@ -33,22 +33,22 @@ export function Navigation() {
           About
         </Link>
         <Link
-          href="/blog"
+          href="/articles"
           className={cn(
             navigationMenuTriggerStyle(),
-            pathname?.startsWith('/blog') ? 'text-foreground font-bold bg-teal-400 h-10 py-2 px-4 border-black group w-max' : 'text-foreground/60 bg-background/0',
+            pathname?.startsWith('/articles') ? 'text-foreground font-bold bg-teal-400 h-10 py-2 px-4 border-black group w-max' : 'text-foreground/60 bg-background/0',
           )}
         >
-          Blog
+          Articles
         </Link>
         <Link
-          href="/contact"
+          href="/projects"
           className={cn(
             navigationMenuTriggerStyle(),
-            pathname?.startsWith('/contact') ? 'text-foreground font-bold bg-teal-400 h-10 py-2 px-4 border-black group w-max' : 'text-foreground/60 bg-background/0',
+            pathname?.startsWith('/projects') ? 'text-foreground font-bold bg-teal-400 h-10 py-2 px-4 border-black group w-max' : 'text-foreground/60 bg-background/0',
           )}
         >
-          Social Media
+          Project
         </Link>
         <Link
           href="/portfolio"

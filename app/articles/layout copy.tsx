@@ -1,4 +1,4 @@
-import { docsConfig } from "@/config/docs"
+import { docsConfig } from "@/config/articles"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { DocsSidebarNav } from "@/components/sidebar-nav"
 

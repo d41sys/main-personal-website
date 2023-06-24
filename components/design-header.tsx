@@ -82,7 +82,7 @@ export function DesignHeader() {
         {designs
           .filter((item, index) => index < 3)
           .map((design, index) => (
-            <DesignPost design={design} key={index}/>
+            <DesignPost design={design} key={index} />
           ))}
       </div>
     </PageHeader>

@@ -8,7 +8,7 @@ import { cn } from '@/lib/utils';
 import '@/styles/globals.css';
 import { Space_Mono } from 'next/font/google';
 
-const spaceMono = Space_Mono({ subsets: ['vietnamese'], weight: ['400', '700'] });
+const spaceMono = Space_Mono({ subsets: ['vietnamese'], weight: ['400', '700'], display: 'swap' });
 
 export const metadata = {
   title: siteConfig.name,
@@ -26,11 +26,10 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" className={spaceMono.className}>
-      {/* <head>
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
-      </head> */}
-      <body className={cn('min-h-screen bg-background antialiased', spaceMono.className)} suppressHydrationWarning={true}>
-        {/* <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script> */}
+      <body
+        className={cn('min-h-screen bg-background antialiased')}
+        suppressHydrationWarning={true}
+      >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="flex min-h-screen flex-col">
             <SiteHeader />

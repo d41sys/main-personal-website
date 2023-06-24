@@ -72,7 +72,7 @@ const animationFiles = [
 export default function Page() {
   return (
     <div className="container relative pb-10">
-      {/* <DesignHeader />
+      <DesignHeader />
       <PageHeader className="max-w-full">
         <PageHeaderHeading className="md:text-3xl">All Ariticles</PageHeaderHeading>
         <div className="flex flex-col w-full">
@@ -80,12 +80,12 @@ export default function Page() {
             <ListItem article={article} />
           ))}
         </div>
-      </PageHeader> */}
-      {animationFiles.map((icon) => <Player
+      </PageHeader>
+      {/* {animationFiles.map((icon) => <Player
         hover
         src={Icons.moonIcon}
         style={{ height: '300px', width: '700px' , flex: 'auto'}}
-      ></Player>)}
+      ></Player>)} */}
     </div>
   );
 }

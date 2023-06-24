@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import { allDocs } from 'contentlayer/generated';
+import { allArticles } from 'contentlayer/generated';
 
 import '@/styles/mdx.css';
 import type { Metadata } from 'next';
@@ -15,15 +15,12 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import { Separator } from '@/components/ui/separator';
 import { Icons } from '@/components/icons';
 import { Mdx } from '@/components/mdx-components';
-import { DocsPager } from '@/components/pager';
+import { ArticlesPager } from '@/components/pager';
 import { DashboardTableOfContents } from '@/components/toc';
 import { cva } from 'class-variance-authority';
 import Image from 'next/image';
-import styled from 'styled-components';
 
-const postHeaderStyle = cva(
-  ' w-full flex items-center justify-center relative z-[-1] flex-col',
-);
+const postHeaderStyle = cva(' w-full flex items-center justify-center relative z-[-1] flex-col');
 const postTitleStyle = cva(
   'text-center md:max-w-[60%] md:leading-[90px] md:text-[72px] pt-[20vh] z-[3] z-[3] h-[60vh] text-white',
 );
@@ -32,38 +29,38 @@ const PostImageS = cva(
   'bg-black bg-no-repeat h-[60vh]	bg-center	bg-cover fixed	w-full top-0 left-0 z-[2] will-change-transform after:absolute after:w-full after:h-full after:bg-gradient-post after:will-change-transform after:z-[2] after:top-0 after:left-0 lg:absolute',
 );
 
-interface DocPageProps {
+interface ArticlePageProps {
   params: {
     slug: string[];
   };
 }
 
-async function getDocFromParams({ params }: DocPageProps) {
+async function getArticleFromParams({ params }: ArticlePageProps) {
   const slug = params.slug?.join('/') || '';
-  const doc = allDocs.find((doc) => doc.slugAsParams === slug);
+  const article = allArticles.find((article) => article.slugAsParams === slug);
 
-  if (!doc) {
+  if (!article) {
     null;
   }
 
-  return doc;
+  return article;
 }
 
-export async function generateMetadata({ params }: DocPageProps): Promise<Metadata> {
-  const doc = await getDocFromParams({ params });
+export async function generateMetadata({ params }: ArticlePageProps): Promise<Metadata> {
+  const article = await getArticleFromParams({ params });
 
-  if (!doc) {
+  if (!article) {
     return {};
   }
 
   return {
-    title: doc.title,
-    description: doc.description,
+    title: article.title,
+    description: article.description,
     openGraph: {
-      title: doc.title,
-      description: doc.description,
+      title: article.title,
+      description: article.description,
       type: 'article',
-      url: absoluteUrl(doc.slug),
+      url: absoluteUrl(article.slug),
       images: [
         {
           url: siteConfig.ogImage,
@@ -75,41 +72,39 @@ export async function generateMetadata({ params }: DocPageProps): Promise<Metada
     },
     twitter: {
       card: 'summary_large_image',
-      title: doc.title,
-      description: doc.description,
+      title: article.title,
+      description: article.description,
       images: [siteConfig.ogImage],
       creator: '@d41sy',
     },
   };
 }
 
-export async function generateStaticParams(): Promise<DocPageProps['params'][]> {
-  return allDocs.map((doc) => ({
-    slug: doc.slugAsParams.split('/'),
+export async function generateStaticParams(): Promise<ArticlePageProps['params'][]> {
+  return allArticles.map((article) => ({
+    slug: article.slugAsParams.split('/'),
   }));
 }
 
-export default async function DocPage({ params }: DocPageProps) {
-  const doc = await getDocFromParams({ params });
+export default async function ArticlePage({ params }: ArticlePageProps) {
+  const article = await getArticleFromParams({ params });
 
-  if (!doc) {
+  if (!article) {
     notFound();
   }
 
-  const toc = await getTableOfContents(doc.body.raw);
-
+  const toc = await getTableOfContents(article.body.raw);
   return (
     <>
       <div className={cn(postHeaderStyle())}>
         <div className={cn(postTitleStyle())}>
-          <h1>{doc.title}</h1>
-          {doc.description && (
+          <h1>{article.title}</h1>
+          {article.description && (
             <p className="text-lg">
-              <Balancer>{doc.description}</Balancer>
+              <Balancer>{article.description}</Balancer>
             </p>
           )}
         </div>
-
         <div className={cn(PostImageS())}>
           <Image
             className="grayscale"
@@ -125,7 +120,7 @@ export default async function DocPage({ params }: DocPageProps) {
             width={0}
             height={0}
             sizes="100vw"
-            src="https://images.pexels.com/photos/1485894/pexels-photo-1485894.jpeg?cs=tinysrgb&w=1260&h=750&dpr=2"
+            src={article.img}
             alt=""
           />
         </div>
@@ -134,18 +129,20 @@ export default async function DocPage({ params }: DocPageProps) {
         <main className="relative py-6 lg:gap-10 lg:py-8 xl:grid xl:grid-cols-[1fr_300px]">
           <div className="mx-auto w-full min-w-0">
             <div className="mb-4 flex items-center space-x-1 text-sm text-muted-foreground">
-              <div className="overflow-hidden text-ellipsis whitespace-nowrap">Blogs</div>
+              <div className="overflow-hidden text-ellipsis whitespace-nowrap">Articles</div>
               <ChevronRight className="h-4 w-4" />
-              <div className="font-medium text-foreground">{doc.title}</div>
+              <div className="font-medium text-foreground">{article.title}</div>
             </div>
             <div className="space-y-2">
-              <h1 className={cn('scroll-m-20 text-4xl font-bold tracking-tight')}>{doc.title}</h1>
+              <h1 className={cn('scroll-m-20 text-4xl font-bold tracking-tight')}>
+                {article.title}
+              </h1>
             </div>
-            {doc.radix ? (
+            {article.radix ? (
               <div className="flex items-center space-x-2 pt-4">
-                {doc.radix?.link && (
+                {article.radix?.link && (
                   <Link
-                    href={doc.radix.link}
+                    href={article.radix.link}
                     target="_blank"
                     rel="noreferrer"
                     className={cn(badgeVariants({ variant: 'secondary' }))}
@@ -154,9 +151,9 @@ export default async function DocPage({ params }: DocPageProps) {
                     Radix UI
                   </Link>
                 )}
-                {doc.radix?.api && (
+                {article.radix?.api && (
                   <Link
-                    href={doc.radix.api}
+                    href={article.radix.api}
                     target="_blank"
                     rel="noreferrer"
                     className={cn(badgeVariants({ variant: 'secondary' }))}
@@ -167,9 +164,9 @@ export default async function DocPage({ params }: DocPageProps) {
               </div>
             ) : null}
             <Separator className="my-4 md:my-6" />
-            <Mdx code={doc.body.code} />
+            <Mdx code={article.body.code} />
             <Separator className="my-4 md:my-6" />
-            <DocsPager doc={doc} />
+            <ArticlesPager article={article} />
           </div>
           <div className="hidden text-sm xl:block">
             <div className="sticky top-16 h-[calc(100vh-3.5rem)] overflow-hidden pt-6">

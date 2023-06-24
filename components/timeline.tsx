@@ -13,7 +13,7 @@ const iconTriggerStyle = cva(
 
 export function Timeline() {
   return (
-    <ol className="mx-5 relative border-l border-black dark:border-gray-700 mt-10">
+    <ol className="mx-5 relative border-l border-black dark:border-gray-700 mt-10 mb-20">
       <li className="mb-10 ml-6">
         <span className={cn(iconTriggerStyle())}>
           <Icons.briefcase className="relative h-4 w-4" viewBox="-3 -3 30 30" />

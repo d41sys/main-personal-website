@@ -1,18 +1,18 @@
 import Link from "next/link"
-import { Doc } from "contentlayer/generated"
+import { Articles } from "contentlayer/generated"
 import { NavItem, NavItemWithChildren } from "types/nav"
 
-import { docsConfig } from "@/config/docs"
+import { docsConfig } from "@/config/articles"
 import { buttonVariants } from "@/components/ui/button"
 import { Icons } from "@/components/icons"
 import { cn } from '@/lib/utils';
 
-interface DocsPagerProps {
-  doc: Doc
+interface ArticlesPagerProps {
+  article: Articles
 }
 
-export function DocsPager({ doc }: DocsPagerProps) {
-  const pager = getPagerForDoc(doc)
+export function ArticlesPager({ article }: ArticlesPagerProps) {
+  const pager = getPagerForDoc(article)
 
   if (!pager) {
     return null
@@ -42,10 +42,10 @@ export function DocsPager({ doc }: DocsPagerProps) {
   )
 }
 
-export function getPagerForDoc(doc: Doc) {
+export function getPagerForDoc(article: Articles) {
   const flattenedLinks = [null, ...flatten(docsConfig.sidebarNav), null]
   const activeIndex = flattenedLinks.findIndex(
-    (link) => doc.slug === link?.href
+    (link) => article.slug === link?.href
   )
   const prev = activeIndex !== 0 ? flattenedLinks[activeIndex - 1] : null
   const next =

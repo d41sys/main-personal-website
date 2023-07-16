@@ -62,8 +62,8 @@ export default function Page() {
         <Timeline/>
         <PageHeaderHeading className="md:text-3xl">Publications</PageHeaderHeading>
         <div className="flex flex-col w-full relative">
-          {designs.map((article) => (
-            <DesignPostSmall design={article} />
+          {designs.map((article, index) => (
+            <DesignPostSmall design={article} key={index}/>
           ))}
         </div>
       </PageHeader>

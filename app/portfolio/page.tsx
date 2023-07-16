@@ -77,8 +77,8 @@ export default function Page() {
       <PageHeader className="max-w-full">
         <PageHeaderHeading className="md:text-3xl">All Designs</PageHeaderHeading>
         <div className="flex flex-col w-full relative">
-          {designs.map((article) => (
-            <DesignPostSmall design={article} />
+          {designs.map((article, index) => (
+            <DesignPostSmall design={article} key={index} />
           ))}
         </div>
       </PageHeader>

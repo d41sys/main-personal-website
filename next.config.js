@@ -2,17 +2,15 @@ const { withContentlayer } = require("next-contentlayer");
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export", 
   reactStrictMode: true,
+  "output": "export",
   swcMinify: true,
+  trailingSlash: true,
   images: {
-    domains: ["avatars.githubusercontent.com", "images.unsplash.com"],
+    domains: ["avatars.githubusercontent.com", "images.unsplash.com", "flowbite.s3.amazonaws.com", "cdn.dribbble.com", "images.pexels.com"],
   },
   experimental: {
     appDir: true,
-  },
-  images : {
-    domains: ["flowbite.s3.amazonaws.com", "cdn.dribbble.com", "images.pexels.com"]
   }
 }
 

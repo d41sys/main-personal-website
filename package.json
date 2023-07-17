@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "concurrently \"contentlayer dev\" \"next dev -p 3001\"",
-    "build": "contentlayer build && pnpm build:components && next build",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },

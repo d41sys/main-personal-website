@@ -40,7 +40,7 @@ async function getArticleFromParams({ params }: ArticlePageProps) {
   const article = allArticles.find((article) => article.slugAsParams === slug);
 
   if (!article) {
-    {};
+    null;
   }
 
   return article;
@@ -49,7 +49,6 @@ async function getArticleFromParams({ params }: ArticlePageProps) {
 // export async function generateMetadata({ params }: ArticlePageProps): Promise<Metadata> {
 //   const article = await getArticleFromParams({ params });
 
-//   console.log(!article)
 //   if (!article) {
 //     return {};
 //   }
@@ -83,7 +82,7 @@ async function getArticleFromParams({ params }: ArticlePageProps) {
 
 export async function generateStaticParams(): Promise<ArticlePageProps['params'][]> {
   return allArticles.map((article) => ({
-    slug: article.slugAsParams.split('/'),
+    slug: article.slugAsParams.split('/')
   }));
 }
 

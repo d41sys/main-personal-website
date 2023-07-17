@@ -46,46 +46,46 @@ async function getArticleFromParams({ params }: ArticlePageProps) {
   return article;
 }
 
-// export async function generateMetadata({ params }: ArticlePageProps): Promise<Metadata> {
-//   const article = await getArticleFromParams({ params });
+export async function generateMetadata({ params }: ArticlePageProps): Promise<Metadata> {
+  const article = await getArticleFromParams({ params });
 
-//   console.log(!article)
-//   if (!article) {
-//     return {};
-//   }
+  console.log(!article)
+  if (!article) {
+    return {};
+  }
 
-//   return {
-//     title: article.title,
-//     description: article.description,
-//     openGraph: {
-//       title: article.title,
-//       description: article.description,
-//       type: 'article',
-//       url: absoluteUrl(article.slug),
-//       images: [
-//         {
-//           url: siteConfig.ogImage,
-//           width: 1200,
-//           height: 630,
-//           alt: siteConfig.name,
-//         },
-//       ],
-//     },
-//     twitter: {
-//       card: 'summary_large_image',
-//       title: article.title,
-//       description: article.description,
-//       images: [siteConfig.ogImage],
-//       creator: '@d41sy',
-//     },
-//   };
-// }
+  return {
+    title: article.title,
+    description: article.description,
+    openGraph: {
+      title: article.title,
+      description: article.description,
+      type: 'article',
+      url: absoluteUrl(article.slug),
+      images: [
+        {
+          url: siteConfig.ogImage,
+          width: 1200,
+          height: 630,
+          alt: siteConfig.name,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: article.title,
+      description: article.description,
+      images: [siteConfig.ogImage],
+      creator: '@d41sy',
+    },
+  };
+}
 
-// export async function generateStaticParams(): Promise<ArticlePageProps['params'][]> {
-//   return allArticles.map((article) => ({
-//     slug: article.slugAsParams.split('/'),
-//   }));
-// }
+export async function generateStaticParams(): Promise<ArticlePageProps['params'][]> {
+  return allArticles.map((article) => ({
+    slug: article.slugAsParams.split('/'),
+  }));
+}
 
 export default async function ArticlePage({ params }: ArticlePageProps) {
   const article = await getArticleFromParams({ params });

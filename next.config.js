@@ -21,6 +21,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/components",
+        destination: "/docs/components/accordion",
+        permanent: true,
+      },
+      {
         source: "/docs/components",
         destination: "/docs/components/accordion",
         permanent: true,

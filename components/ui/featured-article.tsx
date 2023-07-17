@@ -28,8 +28,8 @@ export function FeaturedArticle({ article }) {
             alt=""
           />
           <div className="flex">
-            {article.tags.map((tag) => (
-              <Badge variant="article" className="ml-1 inline mb-1 relative text-white text-center">
+            {article.tags.map((tag, index) => (
+              <Badge variant="article" className="ml-1 inline mb-1 relative text-white text-center" key={index}>
                 {tag}
               </Badge>
             ))}

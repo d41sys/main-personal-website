@@ -34,7 +34,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".contentlayer/generated"
-  ],
+, "config/index.js"  ],
   "exclude": [
     "node_modules"
   ]

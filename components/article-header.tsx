@@ -25,12 +25,11 @@ export function ArticleHeader() {
         href="/portfolio"
         className="inline-flex items-center rounded-lg bg-muted px-3 py-1 text-sm font-medium"
       >
-        🎉 <Separator className="mx-2 h-4" orientation="vertical" /> Discover more posts
+        🎉 <Separator className="mx-2 h-4" orientation="vertical" /> Discover more articles
         <ChevronRight className="ml-1 h-4 w-4" />
       </Link>
       <PageHeaderDescription>
-        Beautifully designed components that you can copy and paste into your apps. Accessible.
-        Customizable. Open Source.
+        Articles on whole life
       </PageHeaderDescription>
       <div className="flex flex-row gap-10 w-full">
         {allArticles.sort((a, b) => b.id - a.id).filter((item, index) => index < 4 && item.featured == true).map((article, index) => (

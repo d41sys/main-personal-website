@@ -35,5 +35,5 @@ yarn-error.log*
 next-env.d.ts
 # contentlayer
 .contentlayer
-
+tast.txt
 *.py

@@ -25,7 +25,7 @@ export function Timeline() {
           </span>
         </h3>
         <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-          Released on January 13th, 2022
+          Aug, 2022 - Jan, 2023
         </time>
         <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
           Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar,

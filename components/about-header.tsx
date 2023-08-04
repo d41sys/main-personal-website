@@ -16,14 +16,13 @@ export function AboutHeader() {
     <div className="flex flex-row mt-10 selection:bg-pinkCustom selection:text-black justify-between">
       <PageHeader className="-mt-10 flex-initial">
         <PageHeaderHeading className="text-transparent bg-clip-text bg-gradient-135 from-pinkCustom to-purpleCustom">
-          Welcome to my home
+          Hi there
         </PageHeaderHeading>
         <Link
           href="/about"
           className="inline-flex items-center rounded-lg bg-muted px-3 py-1 text-sm font-medium"
         >
-          🎉 <Separator className="mx-2 h-4" orientation="vertical" /> Building forms with React
-          Hook Form and Zod
+          🎉 <Separator className="mx-2 h-4" orientation="vertical" /> Looking for my information?
           <ChevronRight className="ml-1 h-4 w-4" />
         </Link>
         <PageHeaderDescription>

@@ -11,7 +11,6 @@ import { Separator } from '@/components/ui/separator';
 import { Icons } from '@/components/icons';
 import { PageHeader, PageHeaderDescription, PageHeaderHeading } from '@/components/page-header';
 import { FeaturedArticle } from '@/components/ui/featured-article';
-import { articles } from '@/config/articles'
 import { allArticles } from 'contentlayer/generated';
 
 

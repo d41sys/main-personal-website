@@ -1,5 +1,4 @@
 import { MainNavItem, SidebarNavItem } from "types/nav"
-import { allArticles } from 'contentlayer/generated';
 
 interface DocsConfig {
   mainNav: MainNavItem[]
@@ -299,59 +298,3 @@ export const docsConfig: DocsConfig = {
   ],
 }
 
-export const articles = [
-  {
-    imgLink: 'https://images.pexels.com/photos/3113541/pexels-photo-3113541.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    title:
-      '1 Lessons learned from growing a 6,338 people waitlist in 7 weeks 1 Lessons learned from growing a 6,338 people waitlist in 7 weeks',
-    desc: "1 I'm writing this post to document what went well and what went wrong. Hopefully, this will help other founders who are launching their own waitlists or looking to find potential users.",
-    time: 'Released on January 13th, 2022',
-    href: '/articles/installation',
-  },
-  {
-    imgLink: 'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg',
-    title: '2 Lessons learned from growing a 6,338 people waitlist in 7 weeks',
-    desc: "2 I'm writing this post to document what went well and what went wrong. Hopefully, this will help other founders who are launching their own waitlists or looking to find potential users.",
-    time: 'Released on January 13th, 2022',
-    href: '/articles/installation',
-  },
-  {
-    imgLink: 'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg',
-    title: '3 Lessons learned from growing a 6,338 people waitlist in 7 weeks',
-    desc: "3 I'm writing this post to document what went well and what went wrong. Hopefully, this will help other founders who are launching their own waitlists or looking to find potential users.",
-    time: 'Released on January 13th, 2022',
-    href: '/articles/installation',
-  },
-  {
-    imgLink: 'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg',
-    title: '4 Lessons learned from growing a 6,338 people waitlist in 7 weeks',
-    desc: "4 I'm writing this post to document what went well and what went wrong. Hopefully, this will help other founders who are launching their own waitlists or looking to find potential users.",
-    time: 'Released on January 13th, 2022',
-    href: '/articles/installation',
-  },
-  {
-    imgLink: 'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg',
-    title: '5 Lessons learned from growing a 6,338 people waitlist in 7 weeks',
-    desc: "5 I'm writing this post to document what went well and what went wrong. Hopefully, this will help other founders who are launching their own waitlists or looking to find potential users.",
-    time: 'Released on January 13th, 2022',
-    href: '/articles/installation',
-  },
-  {
-    imgLink: 'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg',
-    title: '6 Lessons learned from growing a 6,338 people waitlist in 7 weeks',
-    desc: "6 I'm writing this post to document what went well and what went wrong. Hopefully, this will help other founders who are launching their own waitlists or looking to find potential users.",
-    time: 'Released on January 13th, 2022',
-    href: '/articles/installation',
-  },
-  {
-    imgLink: 'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg',
-    title: '7 Lessons learned from growing a 6,338 people waitlist in 7 weeks',
-    desc: "7 I'm writing this post to document what went well and what went wrong. Hopefully, this will help other founders who are launching their own waitlists or looking to find potential users.",
-    time: 'Released on January 13th, 2022',
-    href: '/articles/installation',
-  },
-];
-
-export const articless = allArticles.map((article) => {
-  [].push(article.title)
-})

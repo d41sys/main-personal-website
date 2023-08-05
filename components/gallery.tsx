@@ -10,34 +10,34 @@ import Link from 'next/link';
 
 const imageLinks = [
   [
-    'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg',
-    'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg',
-    'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg',
-  ],
-  [
-    'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg',
-    'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg',
+    'https://cdn.dribbble.com/userupload/7418620/file/original-a59bcb6db067ff8599cf31af756eba7a.png?compress=1&resize=1504x1128',
+    'https://cdn.dribbble.com/userupload/2922074/file/original-ac96fdca5173952de0a4d50a0d06e431.jpg?compress=1&resize=1504x1128',
     'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg',
   ],
   [
-    'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg',
-    'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg',
-    'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg',
+    'https://cdn.dribbble.com/userupload/7418620/file/original-a59bcb6db067ff8599cf31af756eba7a.png?compress=1&resize=1504x1128',
+    'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg',
+    'https://cdn.dribbble.com/userupload/2922074/file/original-ac96fdca5173952de0a4d50a0d06e431.jpg?compress=1&resize=1504x1128',
   ],
   [
-    'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg',
-    'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg',
-    'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg',
+    'https://cdn.dribbble.com/userupload/7418620/file/original-a59bcb6db067ff8599cf31af756eba7a.png?compress=1&resize=1504x1128',
+    'https://cdn.dribbble.com/userupload/2922074/file/original-ac96fdca5173952de0a4d50a0d06e431.jpg?compress=1&resize=1504x1128',
+    'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg',
+  ],
+  [
+    'https://cdn.dribbble.com/userupload/7418620/file/original-a59bcb6db067ff8599cf31af756eba7a.png?compress=1&resize=1504x1128',
+    'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg',
+    'https://cdn.dribbble.com/userupload/2922074/file/original-ac96fdca5173952de0a4d50a0d06e431.jpg?compress=1&resize=1504x1128',
   ],
 ];
 export function Gallery() {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10">
-      {imageLinks.map((imagePacks) => 
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10 ">
+      {imageLinks.map((imagePacks, index) => (
         <div className="grid gap-4">
-          {imagePacks.map((imageLink) =>
+          {imagePacks.map((imageLink, index) => (
             <Image
-              className="rounded-lg"
+              className="border border-black"
               style={{ width: '100%', height: 'auto' }}
               width={0}
               height={0}
@@ -45,9 +45,9 @@ export function Gallery() {
               src={imageLink}
               alt=""
             />
-          )}
+          ))}
         </div>
-      )}
+      ))}
     </div>
   );
 }

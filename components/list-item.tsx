@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 export function ListItem({ article }) {
   return (
-    <>
+    <Link href={article.slug}>
       <motion.div
         className="flex flex-row relative justify-between border-b h-24 max-h-28 last:border-b-0 items-center transition duration-140 ease-in-out hover:border hover:border-black hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,0.9)] group"
       >
@@ -16,6 +16,6 @@ export function ListItem({ article }) {
           Released on {article.time == undefined ? 'Today' : article.time}
         </time>
       </motion.div>
-    </>
+    </Link>
   );
 }

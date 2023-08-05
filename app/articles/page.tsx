@@ -9,7 +9,6 @@ import { ChevronRight } from 'lucide-react';
 import { ListItem } from '@/components/list-item';
 import { PageHeader, PageHeaderDescription, PageHeaderHeading } from '@/components/page-header';
 import { ArticleHeader } from '@/components/article-header';
-import { articles, articless } from '@/config/articles';
 import { allArticles } from 'contentlayer/generated';
 
 export default function Page() {

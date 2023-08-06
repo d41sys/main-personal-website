@@ -1,5 +1,3 @@
-'use client';
-
 import { notFound } from 'next/navigation';
 import { allArticles } from 'contentlayer/generated';
 
@@ -52,39 +50,39 @@ async function getDesignFromParams({ params }: DesignPageProps) {
   return design;
 }
 
-// export async function generateMetadata({ params }: DesignPageProps): Promise<Metadata> {
-//   const article = await getDesignFromParams({ params });
+export async function generateMetadata({ params }: DesignPageProps): Promise<Metadata> {
+  const design = await getDesignFromParams({ params });
 
-//   if (!article) {
-//     return {};
-//   }
+  if (!design) {
+    return {};
+  }
 
-//   return {
-//     title: article.title,
-//     description: article.description,
-//     openGraph: {
-//       title: article.title,
-//       description: article.description,
-//       type: 'article',
-//       url: absoluteUrl(article.slug),
-//       images: [
-//         {
-//           url: siteConfig.ogImage,
-//           width: 1200,
-//           height: 630,
-//           alt: siteConfig.name,
-//         },
-//       ],
-//     },
-//     twitter: {
-//       card: 'summary_large_image',
-//       title: article.title,
-//       description: article.description,
-//       images: [siteConfig.ogImage],
-//       creator: '@d41sy',
-//     },
-//   };
-// }
+  return {
+    title: design.title,
+    description: design.desc,
+    openGraph: {
+      title: design.title,
+      description: design.desc,
+      type: 'article',
+      url: absoluteUrl(design.slug),
+      images: [
+        {
+          url: siteConfig.ogImage,
+          width: 1200,
+          height: 630,
+          alt: siteConfig.name,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: design.title,
+      description: design.desc,
+      images: [siteConfig.ogImage],
+      creator: '@d41sy',
+    },
+  };
+}
 
 export async function generateStaticParams(): Promise<DesignPageProps['params'][]> {
   return allDesigns.map((design) => ({

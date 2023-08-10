@@ -17,7 +17,7 @@ export function Navigation() {
   const pathname = usePathname();
 
   return (
-    <div className="mr-4 hidden md:flex">
+    <div className="mr-4 hidden md:flex selection:bg-redCustom selection:text-black">
       <Link href="/" className="mr-6 flex items-center space-x-2">
         <Icons.logo className="h-4 w-4" />
         <span className="hidden font-bold sm:inline-block">{siteConfig.name}</span>
@@ -27,7 +27,7 @@ export function Navigation() {
           href="/about"
           className={cn(
             navigationMenuTriggerStyle(),
-            pathname === '/about' ? 'text-foreground font-bold bg-teal-400 h-10 py-2 px-4 border-black group w-max' : 'text-foreground/60 bg-background/0',
+            pathname?.startsWith('/about') ? 'text-foreground font-bold bg-teal-400 h-10 py-2 px-4 border-black group w-max' : 'text-foreground/60 bg-background/0',
           )}
         >
           About

@@ -25,7 +25,7 @@ const animationFiles = [
 
 export default function Page() {
   return (
-    <div className="container relative pb-10">
+    <div className="container relative pb-10 selection:bg-purpleCustom selection:text-black">
       <DesignHeader />
       <PageHeader className="max-w-full">
         <PageHeaderHeading className="md:text-3xl">All Designs</PageHeaderHeading>

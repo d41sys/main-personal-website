@@ -99,7 +99,7 @@ export default async function DesignPage({ params }: DesignPageProps) {
 
   return (
     <>
-      <div className="container items-start ">
+      <div className="container items-start selection:bg-purpleCustom selection:text-black">
         <main className="relative py-6">
           <div className="mx-auto w-full min-w-0">
             <div className="mb-4 flex items-center space-x-1 text-sm text-muted-foreground">

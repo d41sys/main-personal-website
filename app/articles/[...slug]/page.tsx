@@ -125,7 +125,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           />
         </div>
       </div>
-      <div className="container items-start md:grid-cols-[220px_minmax(0,1fr)] md:gap-6 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-10">
+      <div className="container items-start md:grid-cols-[220px_minmax(0,1fr)] md:gap-6 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-10 selection:bg-yellowCustom selection:text-black">
         <main className="relative py-6 lg:gap-10 lg:py-8 xl:grid xl:grid-cols-[1fr_300px]">
           <div className="mx-auto w-full min-w-0">
             <div className="mb-4 flex items-center space-x-1 text-sm text-muted-foreground">

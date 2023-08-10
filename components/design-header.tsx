@@ -18,7 +18,7 @@ export function DesignHeader() {
   return (
     <PageHeader className="max-w-full mb-10 selection:bg-purpleCustom selection:text-black">
       <PageHeaderHeading className="text-transparent bg-clip-text bg-gradient-135 from-purpleCustom to-cyanCustom">
-        Design Projects
+        Explore. Exhibition.
       </PageHeaderHeading>
       <Link
         href="/portfolio"
@@ -28,8 +28,7 @@ export function DesignHeader() {
         <ChevronRight className="ml-1 h-4 w-4" />
       </Link>
       <PageHeaderDescription>
-        Beautifully designed components that you can copy and paste into your apps. Accessible.
-        Customizable. Open Source.
+        Dive into creative with art, music, photograph. Here you can find arts which I created by all of creative.
       </PageHeaderDescription>
       <div className="flex flex-row gap-20 w-full">
         {allDesigns

@@ -14,6 +14,7 @@ import { StyleSwitcher } from '@/components/style-switcher';
 import { AboutHeader } from '@/components/about-header';
 import { ArticleHeader } from '@/components/article-header';
 import { DesignHeader } from '@/components/design-header';
+import { ProjectHeader } from '@/components/project-header';
 
 
 export default function Page() {
@@ -21,6 +22,7 @@ export default function Page() {
     <div className="container relative pb-10">
       <StyleSwitcher />
       <AboutHeader />
+      <ProjectHeader />
       <ArticleHeader />  
       <DesignHeader />
     </div>

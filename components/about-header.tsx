@@ -16,7 +16,7 @@ export function AboutHeader() {
     <div className="flex flex-row mt-10 selection:bg-pinkCustom selection:text-black justify-between">
       <PageHeader className="-mt-10 flex-initial">
         <PageHeaderHeading className="text-transparent bg-clip-text bg-gradient-135 from-pinkCustom to-purpleCustom">
-          Hi there
+          Explore. Exploited.
         </PageHeaderHeading>
         <Link
           href="/about"
@@ -25,10 +25,9 @@ export function AboutHeader() {
           🎉 <Separator className="mx-2 h-4" orientation="vertical" /> Looking for my information?
           <ChevronRight className="ml-1 h-4 w-4" />
         </Link>
-        <PageHeaderDescription>
-          Beautifully designed components that you can copy and paste into your apps. Accessible.
-          Customizable. Open Source.
-        </PageHeaderDescription>
+        <div className='inline-block align-top max-w-[850px] text-base text-muted-foreground sm:text-xl w-[580px] '>
+          {siteConfig.bio.map((bio) => <p className='mt-2'>{bio}</p>)}
+        </div>
         <div className="flex w-full items-center space-x-4 pb-8 pt-4 md:pb-10">
           <Link href="/docs" className={cn(buttonVariants())}>
             Get Started

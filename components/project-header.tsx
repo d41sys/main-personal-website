@@ -12,27 +12,28 @@ import { Icons } from '@/components/icons';
 import { PageHeader, PageHeaderDescription, PageHeaderHeading } from '@/components/page-header';
 import { FeaturedArticle } from '@/components/ui/featured-article';
 import { allArticles } from 'contentlayer/generated';
+import { FeaturedProject } from './ui/featured-project';
 
 
-export function ArticleHeader() {
+export function ProjectHeader() {
   return (
-    <PageHeader className="max-w-full mb-10 selection:bg-yellowCustom selection:text-black">
-      <PageHeaderHeading className="text-transparent bg-clip-text bg-gradient-135 from-yellowCustom to-pinkCustom">
-        Explore. Explain.
+    <PageHeader className="max-w-full mb-10 selection:bg-cyanCustom selection:text-black">
+      <PageHeaderHeading className="text-transparent bg-clip-text bg-gradient-135 from-cyanCustom to-redCustom">
+        Explore. Exported.
       </PageHeaderHeading>
       <Link
-        href="/portfolio"
+        href="/projects"
         className="inline-flex items-center rounded-lg bg-muted px-3 py-1 text-sm font-medium"
       >
-        🎉 <Separator className="mx-2 h-4" orientation="vertical" /> Discover more articles
+        🎉 <Separator className="mx-2 h-4" orientation="vertical" /> Discover more projects
         <ChevronRight className="ml-1 h-4 w-4" />
       </Link>
       <PageHeaderDescription>
-        Dive into learn, explore. Here you can find articles which I learned, researched. I`&apos;`m sharing it for you, now.
+        Dive into develope websites, applications, tools. Here you can find projects which I built for work, for learn and for fun.
       </PageHeaderDescription>
       <div className="flex flex-row gap-10 w-full">
-        {allArticles.sort((a, b) => b.id - a.id).filter((item, index) => index < 4 && item.featured == true).map((article, index) => (
-          <FeaturedArticle article={article} key={index}/>
+        {allArticles.sort((a, b) => b.id - a.id).filter((item, index) => index < 4 && item.featured == true).map((project, index) => (
+          <FeaturedProject project={project} key={index}/>
         ))}
       </div>
     </PageHeader>

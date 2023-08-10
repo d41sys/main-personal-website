@@ -13,7 +13,7 @@ import { allArticles } from 'contentlayer/generated';
 
 export default function Page() {
   return (
-    <div className="container relative pb-10">
+    <div className="container relative pb-10 selection:bg-yellowCustom selection:text-black">
       <ArticleHeader />
       <PageHeader className="max-w-full">
         <PageHeaderHeading className="md:text-3xl">All Ariticles</PageHeaderHeading>

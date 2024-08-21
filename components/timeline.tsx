@@ -11,9 +11,31 @@ const iconTriggerStyle = cva(
   'absolute inline-flex items-center justify-center rounded-full transition-colors disabled:opacity-80 bg-background bg-teal-400 hover:text-accent-foreground w-6 h-6 -left-3 ring-8 ring-white dark:ring-gray-900 dark:bg-green-900 mt-0.5',
 );
 
-const experiences = [
+const education = [
   {
     position: 'Master of Engineer',
+    location: 'Soonchunhyang Univ. - 순천향대학교 | GPA: 4.2/4.5 (expected)',
+    work: false,
+    time: 'Feb, 2023 - Present',
+    desc: 'Research about developing an Intrusion Detection System (IDS) in a Vehicle-to-Everything (V2X) environment is critical for enhancing the security of connected vehicles.',
+    needAttach: false,
+    attachName: '',
+    href: '',
+  },
+  {
+    position: 'University Student',
+    location: 'University of Science - Vietnam National University | GPA: 3.5/4.0',
+    work: false,
+    time: 'Aug, 2017 - Aug, 2021',
+    desc: 'Thesis: Audio Injection on Voice-Controllable Systems',
+    needAttach: false,
+    attachName: '',
+    href: '',
+  },
+];
+const experiences = [
+  {
+    position: 'Master of Engineering',
     location: 'Soonchunhyang Univ. - 순천향대학교',
     work: false,
     time: 'Feb, 2023 - Present',
@@ -56,7 +78,7 @@ const experiences = [
 
 function ExpElement({ exp }) {
   return (
-    <div className="mb-10 ml-6">
+    <div className="ml-6">
       <span className={cn(iconTriggerStyle())}>
         {exp.work ? (
           <Icons.laptop className="relative h-4 w-4" viewBox="-3 -3 30 30" />
@@ -95,7 +117,7 @@ export function Timeline() {
   return (
     <>
       <div className="mx-5 relative border-l border-black dark:border-gray-700 mt-10 mb-20">
-        {experiences.map((exp, index) => (
+        {education.map((exp, index) => (
           <ExpElement exp={exp} />
         ))}
       </div>

@@ -11,6 +11,32 @@ import { Separator } from '@/components/ui/separator';
 import { Icons } from '@/components/icons';
 import { PageHeader, PageHeaderDescription, PageHeaderHeading } from '@/components/page-header';
 
+// Function to parse text and insert links
+const parseText = (text: string) => {
+  const linkRegex = /#Link{(https?:\/\/[^\s]+)}{([^}]+)}/g;
+  return text.split(linkRegex).map((part, index) => {
+    if (index % 3 === 1) {
+      const url = part;
+      const linkText = text.split(linkRegex)[index + 1];
+      return (
+        <Link
+          key={index}
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-purpleCustom from-pinkCustom to-purpleCustom hover:text-white hover:bg-gradient-135 hover:font-bold"
+        >
+          {linkText}
+        </Link>
+      );
+    }
+    if (index % 3 === 2) {
+      return null;
+    }
+    return part;
+  });
+};
+
 export function AboutHeader() {
   return (
     <div className="flex flex-row mt-10 selection:bg-pinkCustom selection:text-black justify-between">
@@ -22,24 +48,28 @@ export function AboutHeader() {
           href="/about"
           className="inline-flex items-center rounded-lg bg-muted px-3 py-1 text-sm font-medium"
         >
-          🎉 <Separator className="mx-2 h-4" orientation="vertical" /> Looking for my information?
-          <ChevronRight className="ml-1 h-4 w-4" />
+          🇻🇳🇹🇭🇰🇷 <Separator className="mx-2 h-4" orientation="vertical" /> Tien-Dat Le
+          {/* <ChevronRight className="ml-1 h-4 w-4" /> */}
         </Link>
-        <div className='inline-block align-top max-w-[850px] text-base text-muted-foreground sm:text-xl w-[580px] '>
-          {siteConfig.bio.map((bio) => <p className='mt-2'>{bio}</p>)}
+        <div className="inline-block align-top max-w-[850px] text-base text-muted-foreground sm:text-l w-[850px] ">
+          {siteConfig.bio.map((text, index) => (
+            <p key={index} className="mt-2">
+              {parseText(text)}
+            </p>
+          ))}
         </div>
         <div className="flex w-full items-center space-x-4 pb-8 pt-4 md:pb-10">
-          <Link href="/docs" className={cn(buttonVariants())}>
-            Get Started
+          <Link href="/about/" className={cn(buttonVariants())}>
+            More information
           </Link>
           <Link
             target="_blank"
             rel="noreferrer"
-            href={siteConfig.links.github}
+            href={siteConfig.links.mail}
             className={cn(buttonVariants({ variant: 'shadow' }))}
           >
-            <Icons.gitHub className="mr-2 h-4 w-4" />
-            GitHub
+            <Icons.user className="mr-2 h-4 w-4" />
+            Get in touch
           </Link>
         </div>
       </PageHeader>
@@ -47,7 +77,7 @@ export function AboutHeader() {
         autoplay
         loop
         src="https://lottie.host/74e15f43-265d-440c-91f7-981a19c57509/hKAK9Xc3mv.json"
-        style={{ height: '300px', width: '700px' , flex: 'auto'}}
+        style={{ flex: 'auto' }}
       ></Player>
     </div>
   );

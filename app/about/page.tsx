@@ -12,12 +12,12 @@ export default function Page() {
       <AboutHeader />
 
       <PageHeader className="max-w-full">
-        <PageHeaderHeading className="md:text-3xl">Experiences</PageHeaderHeading>
-        <Timeline/>
+        <PageHeaderHeading className="md:text-3xl">Education</PageHeaderHeading>
+        <Timeline />
         <PageHeaderHeading className="md:text-3xl">Academic & Publications</PageHeaderHeading>
         <div className="flex flex-col w-full relative">
           {allDesigns.map((article, index) => (
-            <ListItem article={article} key={index}/>
+            <ListItem article={article} key={index} />
           ))}
         </div>
       </PageHeader>

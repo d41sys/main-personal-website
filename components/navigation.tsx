@@ -23,42 +23,20 @@ export function Navigation() {
         <span className="hidden font-bold sm:inline-block">{siteConfig.name}</span>
       </Link>
       <nav className="flex items-center space-x-3 text-sm font-medium">
-        <Link
-          href="/about"
-          className={cn(
-            navigationMenuTriggerStyle(),
-            pathname?.startsWith('/about') ? 'text-foreground font-bold bg-teal-400 h-10 py-2 px-4 border-black group w-max' : 'text-foreground/60 bg-background/0',
-          )}
-        >
-          About
-        </Link>
-        <Link
-          href="/articles"
-          className={cn(
-            navigationMenuTriggerStyle(),
-            pathname?.startsWith('/articles') ? 'text-foreground font-bold bg-teal-400 h-10 py-2 px-4 border-black group w-max' : 'text-foreground/60 bg-background/0',
-          )}
-        >
-          Articles
-        </Link>
-        <Link
-          href="/projects"
-          className={cn(
-            navigationMenuTriggerStyle(),
-            pathname?.startsWith('/projects') ? 'text-foreground font-bold bg-teal-400 h-10 py-2 px-4 border-black group w-max' : 'text-foreground/60 bg-background/0',
-          )}
-        >
-          Project
-        </Link>
-        <Link
-          href="/portfolio"
-          className={cn(
-            navigationMenuTriggerStyle(),
-            pathname?.startsWith('/portfolio') ? 'text-foreground font-bold bg-teal-400 h-10 py-2 px-4 border-black group w-max' : 'text-foreground/60 bg-background/0',
-          )}
-        >
-          Portfolio
-        </Link>
+        {Object.entries(siteConfig.paths).map(([name, path]) => (
+          <Link
+            href={path}
+            key={name}
+            className={cn(
+              navigationMenuTriggerStyle(),
+              pathname?.startsWith(path)
+                ? 'text-foreground font-bold bg-teal-400 h-10 py-2 px-4 border-black group w-max'
+                : 'text-foreground/60 bg-background/0',
+            )}
+          >
+            {name}
+          </Link>
+        ))}
       </nav>
     </div>
   );

@@ -14,7 +14,7 @@ export default function Page() {
       <PageHeader className="max-w-full">
         <PageHeaderHeading className="md:text-3xl">Education</PageHeaderHeading>
         <Timeline />
-        <PageHeaderHeading className="md:text-3xl">Academic & Publications</PageHeaderHeading>
+        <PageHeaderHeading className="md:text-3xl">Publications</PageHeaderHeading>
         <div className="flex flex-col w-full relative">
           {allDesigns.map((article, index) => (
             <ListItem article={article} key={index} />

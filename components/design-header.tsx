@@ -16,7 +16,7 @@ import { allDesigns } from '@/config/portfolio';
 
 export function DesignHeader() {
   return (
-    <PageHeader className="max-w-full mb-10 selection:bg-purpleCustom selection:text-black">
+    <PageHeader className="container max-w-full mb-10 selection:bg-purpleCustom selection:text-black">
       <PageHeaderHeading className="text-transparent bg-clip-text bg-gradient-135 from-purpleCustom to-cyanCustom">
         Explore. Exhibition.
       </PageHeaderHeading>

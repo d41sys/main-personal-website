@@ -16,6 +16,7 @@ import { ArticleHeader } from '@/components/article-header';
 import { DesignHeader } from '@/components/design-header';
 import { ProjectHeader } from '@/components/project-header';
 
+import { useEffect } from 'react';
 
 export default function Page() {
   return (

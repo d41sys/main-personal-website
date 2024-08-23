@@ -39,7 +39,7 @@ const parseText = (text: string) => {
 
 export function AboutHeader() {
   return (
-    <div className="flex flex-row mt-10 selection:bg-pinkCustom selection:text-black justify-between">
+    <div className="flex flex-row mt-[15svh] selection:bg-pinkCustom selection:text-black w-full h-[79svh] justify-center">
       <PageHeader className="-mt-10 flex-initial">
         <PageHeaderHeading className="text-transparent bg-clip-text bg-gradient-135 from-pinkCustom to-purpleCustom">
           Explore. Exploited.
@@ -51,9 +51,9 @@ export function AboutHeader() {
           🇻🇳🇹🇭🇰🇷 <Separator className="mx-2 h-4" orientation="vertical" /> Tien-Dat Le
           {/* <ChevronRight className="ml-1 h-4 w-4" /> */}
         </Link>
-        <div className="inline-block align-top max-w-[850px] text-base text-muted-foreground sm:text-l w-[850px] ">
+        <div className="inline-block align-top text-base text-muted-foreground sm:text-lg w-[750px] ">
           {siteConfig.bio.map((text, index) => (
-            <p key={index} className="mt-2">
+            <p key={index} className="mt-3">
               {parseText(text)}
             </p>
           ))}

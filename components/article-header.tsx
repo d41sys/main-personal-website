@@ -16,7 +16,7 @@ import { allArticles } from 'contentlayer/generated';
 
 export function ArticleHeader() {
   return (
-    <PageHeader className="max-w-full mb-10 selection:bg-yellowCustom selection:text-black">
+    <PageHeader className="container max-w-full mb-10 selection:bg-yellowCustom selection:text-black">
       <PageHeaderHeading className="text-transparent bg-clip-text bg-gradient-135 from-yellowCustom to-pinkCustom">
         Explore. Explain.
       </PageHeaderHeading>

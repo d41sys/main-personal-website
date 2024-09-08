@@ -16,16 +16,19 @@ import { ArticleHeader } from '@/components/article-header';
 import { DesignHeader } from '@/components/design-header';
 import { ProjectHeader } from '@/components/project-header';
 
-import { useEffect } from 'react';
+import { useRef } from 'react';
+import { useScroll, useTransform, motion } from 'framer-motion';
+import { useLayoutEffect } from 'react';
 
 export default function Page() {
+
   return (
-    <div className="container relative pb-10">
+    <section className="container relative w-full">
       <StyleSwitcher />
       <AboutHeader />
       <ProjectHeader />
-      <ArticleHeader />  
+      <ArticleHeader />
       <DesignHeader />
-    </div>
+    </section>
   );
 }

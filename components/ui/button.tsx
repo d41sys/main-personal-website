@@ -18,6 +18,7 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-teal-400 hover:text-accent-foreground",
         link: "underline-offset-4 hover:underline text-primary",
+        shadowNavi: "hover:border hover:border-black hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.9)] transition duration-140 ease-in-out",
         shadow: "border border-black hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.9)] transition duration-140 ease-in-out"
       },
       size: {

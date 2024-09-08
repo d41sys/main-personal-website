@@ -23,7 +23,7 @@ import { useLayoutEffect } from 'react';
 export default function Page() {
 
   return (
-    <section className="container relative w-full">
+    <section className="container w-full">
       <StyleSwitcher />
       <AboutHeader />
       <ProjectHeader />

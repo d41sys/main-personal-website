@@ -9,7 +9,6 @@ const nextConfig = {
     domains: ["avatars.githubusercontent.com", "images.unsplash.com", "flowbite.s3.amazonaws.com", "cdn.dribbble.com", "images.pexels.com", "d33wubrfki0l68.cloudfront.net"],
   },
   experimental: {
-    appDir: true,
   }
 }
 

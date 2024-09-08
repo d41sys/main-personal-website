@@ -118,7 +118,7 @@ export function Timeline() {
     <>
       <div className="mx-5 relative border-l border-black dark:border-gray-700 mt-10 mb-20">
         {education.map((exp, index) => (
-          <ExpElement exp={exp} />
+          <ExpElement exp={exp} key={index}/>
         ))}
       </div>
     </>

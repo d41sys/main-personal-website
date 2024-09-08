@@ -4,7 +4,8 @@ import { AboutHeader } from '@/components/about-header';
 import { DesignPostSmall } from '@/components/ui/design-post-small';
 import { ListItem } from '@/components/list-item';
 import { PageHeader, PageHeaderDescription, PageHeaderHeading } from '@/components/page-header';
-import { allDesigns } from '@/config/portfolio';
+import { allPublish } from '@/config/publications';
+import { ListItemExternal } from '@/components/list-item-external';
 
 export default function Page() {
   return (
@@ -16,8 +17,8 @@ export default function Page() {
         <Timeline />
         <PageHeaderHeading className="md:text-3xl">Publications</PageHeaderHeading>
         <div className="flex flex-col w-full relative">
-          {allDesigns.map((article, index) => (
-            <ListItem article={article} key={index} />
+          {allPublish.map((article, index) => (
+            <ListItemExternal article={article} key={index} itemKey={index}/>
           ))}
         </div>
       </PageHeader>

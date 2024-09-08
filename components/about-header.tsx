@@ -39,8 +39,8 @@ const parseText = (text: string) => {
 
 export function AboutHeader() {
   return (
-    <div className="flex flex-row mt-10 selection:bg-pinkCustom selection:text-black justify-between">
-      <PageHeader className="-mt-10 flex-initial">
+    <section className="flex flex-row selection:bg-pinkCustom selection:text-black justify-between">
+      <PageHeader className="flex-initial">
         <PageHeaderHeading className="text-transparent bg-clip-text bg-gradient-135 from-pinkCustom to-purpleCustom">
           Explore. Exploited.
         </PageHeaderHeading>
@@ -79,6 +79,6 @@ export function AboutHeader() {
         src="https://lottie.host/74e15f43-265d-440c-91f7-981a19c57509/hKAK9Xc3mv.json"
         style={{ flex: 'auto' }}
       ></Player>
-    </div>
+    </section>
   );
 }

@@ -23,6 +23,8 @@ const badgeVariants = cva(
         outline: "text-foreground",
         article:
           "max-w-[100px] bg-primary hover:bg-primary/80 border-transparent text-primary-foreground",
+        sideTitle: "bg-primary border-transparent text-primary-foreground",
+        sideTitleRe: "border border-black text-black bg-transparent",
       },
     },
     defaultVariants: {

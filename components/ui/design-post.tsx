@@ -26,22 +26,24 @@ export function DesignPost({ design }) {
             src={design.imgLink}
             alt=""
           />
-          <h3 className="scroll-m-20 border-b border-black pb-2 text-xl font-semibold tracking-tight transition-colors first:mt-0 px-2">
+          <h3 className="scroll-m-20 border-b border-black text-xl font-semibold tracking-tight transition-colors first:mt-0 px-2 h-16">
             {design.title}
           </h3>
           <div className="flex flex-row">
-            <Badge variant="uidesign" className="ml-1 inline mt-1 relative text-white text-center">
-              UI Design
-            </Badge>
-            <Badge variant="code" className="ml-1 inline mt-1 relative text-white text-center">
-              Code
-            </Badge>
-            <Badge variant="illus" className="ml-1 nline mt-1 relative text-white text-center">
-              Illustration
-            </Badge>
+            {design.bags.map((bag, index) => (
+              <Badge
+                key={index}
+                variant="illus"
+                className="ml-1 nline mt-1 relative text-white text-center"
+              >
+                {bag}
+              </Badge>
+            ))}
           </div>
 
-          <div className="leading-7 [&:not(:first-child)]:mt-3 px-2">{design.desc}</div>
+          <div className="leading-7 [&:not(:first-child)]:mt-3 px-2 line-clamp-4">
+            {design.desc}
+          </div>
         </div>
       </Link>
     </div>

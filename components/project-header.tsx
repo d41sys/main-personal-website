@@ -13,6 +13,7 @@ import { PageHeader, PageHeaderDescription, PageHeaderHeading } from '@/componen
 import { FeaturedArticle } from '@/components/ui/featured-article';
 import { allArticles } from 'contentlayer/generated';
 import { FeaturedProject } from './ui/featured-project';
+import { allProject } from '@/config/projects';
 
 
 export function ProjectHeader() {
@@ -31,8 +32,8 @@ export function ProjectHeader() {
       <PageHeaderDescription>
         Dive into develope websites, applications, tools. Here you can find projects which I built for work, for learn and for fun.
       </PageHeaderDescription>
-      <div className="flex flex-row gap-10 w-full">
-        {allArticles.sort((a, b) => b.id - a.id).filter((item, index) => index < 4 && item.featured == true).map((project, index) => (
+      <div className="flex flex-row gap-4 w-full">
+        {allProject.filter((item, index) => index < 4 && item.featured == true).map((project, index) => (
           <FeaturedProject project={project} key={index}/>
         ))}
       </div>

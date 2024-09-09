@@ -1,82 +1,39 @@
 ---
 id: 2
-title: Installation
-description: How to install dependencies and structure your app.
+title: How does SSH work?
+description: Learn how SSH works and how to use it to connect to remote servers.
 featured: true
+tags:
+  - Protocol
 ---
 
-## Next.js
+This week’s system design refresher:
+- How does SSH work?
 
-### Create project
+- List of Subjects That Should be Mandatory in Schools
 
-Start by creating a new Next.js project using `create-next-app`:
+- 8 Common System Design Problems and Solutions
 
-```bash
-npx create-next-app@latest my-app --typescript --tailwind --eslint
-```
+- Why is Nginx so popular?
 
-### Run the CLI
+## How does SSH work?
+SSH (Secure Shell) is a network protocol used to securely connect to remote machines over an unsecured network. It encrypts the connection and provides various mechanisms for authentication and data transfer.
 
-Run the `shadcn-ui` init command to setup your project:
+<div class="flex justify-center py-4">
+  <img src="https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_lossy/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fed998b2e-fbc8-4c3c-b339-eca5abd85ce3_1289x1536.gif" alt="SSH Diagram" width="500" />
+</div>
 
-```bash
-npx shadcn-ui@latest init
-```
+SSH has two versions: SSH-1 and SSH-2. SSH-2 was standardized by the IETF.
+It has three main layers: Transport Layer, Authentication Layer, and Connection Layer.
 
-### Configure components.json
+1. Transport Layer
+The Transport Layer provides encryption, integrity, and data protection to ensure secure communication between the client and server.
 
-You will be asked a few questions to configure `components.json`:
+2. Authentication Layer
+The Authentication Layer verifies the identity of the client to ensure that only authorized users can access the server.
 
-```txt showLineNumbers
-Which style would you like to use? › Default
-Which color would you like to use as base color? › Slate
-Where is your global CSS file? › › app/globals.css
-Do you want to use CSS variables for colors? › no / yes
-Where is your tailwind.config.js located? › tailwind.config.js
-Configure the import alias for components: › @/components
-Configure the import alias for utils: › @/lib/utils
-Are you using React Server Components? › no / yes
-```
-
-### App structure
-
-Here's how I structure my app. I use Next.js, but this is not required.
-
-```txt {6-10,14-15}
-.
-├── app
-│   ├── layout.tsx
-│   └── page.tsx
-├── components
-│   ├── ui
-│   │   ├── alert-dialog.tsx
-│   │   ├── button.tsx
-│   │   ├── dropdown-menu.tsx
-│   │   └── ...
-│   ├── main-nav.tsx
-│   ├── page-header.tsx
-│   └── ...
-├── lib
-│   └── utils.ts
-├── styles
-│   └── globals.css
-├── next.config.js
-├── package.json
-├── postcss.config.js
-├── tailwind.config.js
-└── tsconfig.json
-```
-
-- I place the UI components in the `components/ui` folder.
-- The rest of the components such as `<PageHeader />` and `<MainNav />` are placed in the `components` folder.
-- The `lib` folder contains all the utility functions. I have a `utils.ts` where I define the `cn` helper.
-- The `styles` folder contains the global CSS.
-
-That's it. You can now start adding components to your project.
-
-```bash
-npx shadcn-ui@latest add
-```
+3. Connection Layer
+The Connection Layer multiplexes the encrypted and authenticated communication into multiple logical channels.
 
 ## Other frameworks
 

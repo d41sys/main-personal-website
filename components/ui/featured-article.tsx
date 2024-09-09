@@ -34,11 +34,11 @@ export function FeaturedArticle({ article }) {
               </Badge>
             ))}
           </div>
-          <h3 className="scroll-m-20 border-b border-black pb-2 text-xl font-semibold tracking-tight transition-colors first:mt-0 px-2">
+          <h3 className="h-16 scroll-m-20 border-b border-black pb-2 text-xl font-semibold tracking-tight transition-colors first:mt-0 px-2 line-clamp-2">
             {article.title}
           </h3>
           <div className="leading-7 [&:not(:first-child)]:mt-4 px-2">{article.description}</div>
-          <div className="text-xs scroll-m-20 pt-2 text-xl font-semibold tracking-tight transition-colors first:mt-0 px-2 mb-2">
+          <div className="text-xs scroll-m-20 pt-2 font-semibold tracking-tight transition-colors first:mt-0 px-2 mb-2">
             {article.readingTime.text}
           </div>
         </div>

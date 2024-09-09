@@ -37,6 +37,9 @@ const parseText = (text: string) => {
   });
 };
 
+// https://lottie.host/03c4e582-5b2a-4fa1-b331-dedbba71b30d/LBrYtOtsal.json
+// https://lottie.host/74e15f43-265d-440c-91f7-981a19c57509/hKAK9Xc3mv.json
+
 export function AboutHeader() {
   return (
     <section className="flex flex-row selection:bg-pinkCustom selection:text-black justify-between">
@@ -76,8 +79,8 @@ export function AboutHeader() {
       <Player
         autoplay
         loop
-        src="https://lottie.host/74e15f43-265d-440c-91f7-981a19c57509/hKAK9Xc3mv.json"
-        style={{ flex: 'auto' }}
+        src="https://lottie.host/39e2b9e6-968d-4625-9256-ec0677ea093b/Nfqy6IXzsj.json"
+        style={{ flex: 'auto', paddingTop: '8vh'}}
       ></Player>
     </section>
   );

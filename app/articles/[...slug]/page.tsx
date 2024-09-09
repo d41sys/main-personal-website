@@ -82,7 +82,7 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
 
 export async function generateStaticParams(): Promise<ArticlePageProps['params'][]> {
   return allArticles.map((article) => ({
-    slug: article.slugAsParams.split('/')
+    slug: article.slugAsParams.split('/'),
   }));
 }
 
@@ -96,6 +96,9 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
   const toc = await getTableOfContents(article.body.raw);
   return (
     <>
+      <div className="bg-yellow-300 text-black text-center py-2">
+        This page is currently under maintenance. Some features may not be available. The content is copied from the another website.
+      </div>
       <div className={cn(postHeaderStyle())}>
         <div className={cn(postTitleStyle())}>
           <h1>{article.title}</h1>

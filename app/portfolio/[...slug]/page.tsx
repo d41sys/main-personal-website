@@ -99,6 +99,9 @@ export default async function DesignPage({ params }: DesignPageProps) {
 
   return (
     <>
+      <div className="bg-yellow-300 text-black text-center py-2">
+        This page is currently under maintenance. Some features may not be available.
+      </div>
       <div className="container items-start selection:bg-purpleCustom selection:text-black">
         <main className="relative py-6">
           <div className="mx-auto w-full min-w-0">

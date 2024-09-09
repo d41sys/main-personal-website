@@ -11,7 +11,7 @@ const badgeVariants = cva(
         default:
           "bg-primary hover:bg-primary/80 border-transparent text-primary-foreground",
         uidesign:
-          "max-w-[90px] bg-gradient-to-r from-rose-400 to-orange-300 hover:bg-gradient-to-r from-rose-400 to-orange-300/80 border-black",
+          "bg-gradient-to-r from-rose-400 to-orange-300 hover:bg-gradient-to-r from-rose-400 to-orange-300/80 border-black",
         code:
           "max-w-[60px] bg-primary hover:bg-primary/80 border-transparent text-primary-foreground",
         illus:
@@ -20,9 +20,11 @@ const badgeVariants = cva(
           "bg-secondary hover:bg-secondary/80 border-transparent text-secondary-foreground",
         destructive:
           "bg-destructive hover:bg-destructive/80 border-transparent text-destructive-foreground",
+        tags:
+          "bg-teal-100 hover:bg-teal-100/80 border-transparent text-teal-800",
         outline: "text-foreground",
         article:
-          "max-w-[100px] bg-primary hover:bg-primary/80 border-transparent text-primary-foreground",
+          "bg-primary hover:bg-primary/80 border-transparent text-primary-foreground",
         sideTitle: "bg-primary border-transparent text-primary-foreground",
         sideTitleRe: "border border-black text-black bg-transparent",
       },

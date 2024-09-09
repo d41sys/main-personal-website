@@ -14,7 +14,7 @@ export function DesignPostSmall({ design }) {
             style={{
               objectFit: 'cover',
               width: '500px',
-              height: '150px',
+              height: '160px',
               backgroundSize: 'cover',
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center center',
@@ -27,25 +27,24 @@ export function DesignPostSmall({ design }) {
           />
 
           <div className="flex flex-col justify-between ml-2">
-            <div className="mt-1">
-              <h2 className="scroll-m-20 ext-xl font-semibold tracking-tight transition-colors first:mt-0 px-2">
+            <div className="">
+              <h2 className="scroll-m-20 text-xl font-semibold tracking-tight transition-colors first:mt-0 px-2">
                 {design.title}
               </h2>
-              <div className="leading-7 [&:not(:first-child)]:mt-1 px-2">{design.desc}</div>
+              <div className="leading-7 [&:not(:first-child)]:mt-1 px-3 line-clamp-3 max-w-3xl">
+                {design.desc}
+              </div>
             </div>
             <div className="flex flex-row pb-3">
-              <Badge
-                variant="uidesign"
-                className="ml-1 inline mt-1 relative text-white text-center"
-              >
-                UI Design
-              </Badge>
-              <Badge variant="code" className="ml-1 inline mt-1 relative text-white text-center">
-                Code
-              </Badge>
-              <Badge variant="illus" className="ml-1 nline mt-1 relative text-white text-center">
-                Illustration
-              </Badge>
+              {design.bags.map((bag, index) => (
+                <Badge
+                  key={index}
+                  variant="illus"
+                  className="ml-1 nline mt-1 relative text-white text-center"
+                >
+                  {bag}
+                </Badge>
+              ))}
             </div>
           </div>
         </div>

@@ -34,9 +34,11 @@ export function ListItemExternal({ article, itemKey }) {
             {article.journal}
           </span>
           <div className="flex flex-row pt-2 pb-2">
-            <Badge variant="uidesign" className="ml-1 inline relative text-white text-center max-w-24">
-              Q1 Journal
-            </Badge>
+            {article.tags.map((tag, index) => (
+              <Badge key={index} variant="tags" className="ml-1 inline relative text-center">
+                {tag}
+              </Badge>
+            ))}
           </div>
         </div>
       </motion.div>

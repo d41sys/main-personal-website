@@ -16,10 +16,10 @@ export function FeaturedProject({ project }) {
               </Badge>
             ))}
           </div>
-          <h3 className="scroll-m-20 border-b border-black pb-2 text-xl font-semibold tracking-tight transition-colors first:mt-0 px-2">
+          <h3 className="scroll-m-20 border-b border-black pb-2 text-xl font-semibold tracking-tight transition-colors first:mt-0 px-2 h-16">
             {project.title}
           </h3>
-          <div className="leading-7 [&:not(:first-child)]:mt-4 px-2 mb-2">{project.description}</div>
+          <div className="leading-7 [&:not(:first-child)]:mt-4 px-2 mb-2 text-sm line-clamp-3">{project.desc}</div>
         </div>
       </Link>
     </div>

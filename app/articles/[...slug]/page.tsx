@@ -22,11 +22,11 @@ import Image from 'next/image';
 
 const postHeaderStyle = cva(' w-full flex items-center justify-center relative z-[-1] flex-col');
 const postTitleStyle = cva(
-  'text-center md:max-w-[60%] md:leading-[90px] md:text-[72px] pt-[20vh] z-[3] z-[3] h-[60vh] text-white',
+  'text-center md:max-w-[80%] transform translate-y-1/3 md:leading-[90px] md:text-[72px] z-[3] z-[3] h-svh text-white',
 );
 
 const PostImageS = cva(
-  'bg-black bg-no-repeat h-[60vh]	bg-center	bg-cover fixed	w-full top-0 left-0 z-[2] will-change-transform after:absolute after:w-full after:h-full after:bg-gradient-post after:will-change-transform after:z-[2] after:top-0 after:left-0 lg:absolute',
+  'bg-black bg-no-repeat h-svh bg-center bg-cover fixed w-full top-0 left-0 z-[-1] will-change-transform after:absolute after:w-full after:h-full after:bg-gradient-post after:will-change-transform after:z-[2] after:top-0 after:left-0 lg:absolute backdrop-blur-md',
 );
 
 interface ArticlePageProps {
@@ -96,9 +96,9 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
   const toc = await getTableOfContents(article.body.raw);
   return (
     <>
-      <div className="bg-yellow-300 text-black text-center py-2">
+      {/* <div className="bg-yellow-300 text-black text-center py-2">
         This page is currently under maintenance. Some features may not be available. The content is copied from the another website.
-      </div>
+      </div> */}
       <div className={cn(postHeaderStyle())}>
         <div className={cn(postTitleStyle())}>
           <h1>{article.title}</h1>
@@ -109,23 +109,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           )}
         </div>
         <div className={cn(PostImageS())}>
-          <Image
-            className="grayscale"
-            style={{
-              marginBottom: '10px',
-              objectFit: 'cover',
-              width: '100%',
-              height: '60vh',
-              backgroundSize: 'cover',
-              backgroundRepeat: 'no-repeat',
-              backgroundPosition: 'center center',
-            }}
-            width={0}
-            height={0}
-            sizes="100vw"
-            src={article.img}
-            alt=""
-          />
+          <Image className="object-cover grayscale" src={article.img} fill alt="" />
         </div>
       </div>
       <div className="container items-start md:grid-cols-[220px_minmax(0,1fr)] md:gap-6 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-10 selection:bg-yellowCustom selection:text-black">

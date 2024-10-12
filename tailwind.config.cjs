@@ -59,6 +59,7 @@ module.exports = {
         'purpleCustom': '#9580ff',
         'redCustom': '#ff9580',
         'yellowCustom': '#ffff80',
+        
       },
       backgroundImage: {
         'gradient-135': 'linear-gradient(135deg, var(--tw-gradient-stops))',
@@ -83,7 +84,21 @@ module.exports = {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
       },
+      backdropBlur: {
+        sm: '4px',
+        md: '8px',
+        lg: '12px',
+        xl: '16px',
+      },
     },
   },
-  plugins: [require('tailwindcss-animate'), require('flowbite/plugin')],
+  plugins: [
+    require('tailwindcss-animate'),
+    require('flowbite/plugin'),
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/aspect-ratio'),
+    require('@tailwindcss/line-clamp'),
+    require('tailwindcss-filters'),
+  ],
 };
